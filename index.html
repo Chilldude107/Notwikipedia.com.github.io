@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Blog</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #3C4782;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .post {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .post h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .date {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .post p {
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       WEBSITE TITLE
+       ========================================= -->
+
+  <header>
+
+    <h1>Not wikepedia</h1>
+
+    <p>Welcome to not wikepedia</p>
+
+  </header>
+
+
+
+  <main class="container">
+
+    <h2>Latest Posts</h2>
+
+    <div id="posts"></div>
+
+  </main>
+
+
+
+  <footer>
+
+    <p>©made by Chilldude107 </p>
+
+  </footer>
+
+
+
+  <script>
+
+
+    /* =================================================
+       📝 BLOG POSTS
+
+       THIS IS THE ONLY PART YOU NEED TO EDIT.
+
+       Put your newest post FIRST.
+
+       You can write as much text as you want
+       inside "text".
+
+       ================================================= */
+
+
+    const blogPosts = [
+
+
+      {
+        title: "MIT Students Invent World Changing Metamaterial",
+
+        date: "September 23, 2026",
+
+        text: `
+Have you ever heard of a metamaterial before? If not you might be wondering. What is a metamaterial? And how is it deifferent from the materials we have. Well Im here to tell you. Metamaterials are synthetic  man made engineered mayterials that have the overall exceptional properties of meta atoms of other materials like how somethings shaped , its size, and its arrangement
+
+Through this understanding engineers from MIT were able to create a synthetic metmaterial that is both strechy and strong. The base material is typically Highly rigid and brittle but its printed precise and intricate patterns that form a structure that is both strong and flexible.The key to the new material’s dual properties is a combination of stiff microscopic struts and a softer woven architecture. This microscopic “double network,” which is printed using a plexiglass-like polymer, produced a material that could stretch over four times its size without fully breaking. In comparison, the polymer in other forms has little to no stretch and shatters easily once cracked.
+
+And Based on researchers from MIT they say that the new double network design can be applied to other materials like ceramics, glass, and metals which are strong and tough materials that can be made into tear-ressistant textiles and fexible semiconductors.Based on Carlos Portela, the Robert N. Noyce Career Development Associate Professor at MIT. “You could print a double-network metal or ceramic, and you could get a lot of these benefits, in that it would take more energy to break them, and they would be significantly more stretchable.”	
+
+      `
+      },
+
+
+      {
+        title: "Ongoing crisis People living Near Active Fault Lines",
+
+        date: "September 23, 2026",
+
+        text: `
+        On your opinion should people live near active fault lines? Well on my opinion it is very dangerous.And has a lot of financial and structurals risks. Like possible destruction of houses due to fault lines and possible earthquakes. Which could leave families and citezens poor due to theyre houses being destroyed.And this could also potentialy kill several inonocent lives.
+        
+        based on what I see its really hard to answer the question if they should live near fault lines or not. This is because of 3 reasons which are. Where would the people go if we moved them? How will we move them to somewhere safe? How will we get people to agree to leave these places?
+
+        Although really on my opinion we should try to make an effort to move them. Or at least find a way to make it safer or establish a evacutation zone. And maybe try to get the governments attention on this. Becasue even thought the right thing to do is to let them move to somewhere safer. It becomes complicated to do and accomplish Which is sad because there are several people who could die and we dont know when its gonna happen.So I hope that we soon find a way to deal witht theese problems and haelp the people migrate to somewhere safer or atleast find a structure that could withstand all the earthquakes pottentially letting them live safely.
+      `
+      }
+
+
+    ];
+
+
+    /* =================================================
+       DO NOT EDIT BELOW THIS LINE
+       ================================================= */
+
+
+    const postsContainer =
+      document.getElementById("posts");
+
+
+    blogPosts.forEach(post => {
+
+      const article =
+        document.createElement("article");
+
+      article.className = "post";
+
+
+      article.innerHTML = `
+
+        <h2>
+          ${post.title}
+        </h2>
+
+        <div class="date">
+          ${post.date}
+        </div>
+
+        <p>
+          ${post.text}
+        </p>
+
+      `;
+
+
+      postsContainer.appendChild(article);
+
+    });
+
+
+  </script>
+
+</body>
+
+</html>
+```
